@@ -1,0 +1,70 @@
+{
+  "stories": [
+    {
+      "id": 0,
+      "title": "Gray === Grey",
+      "description":
+        "..in order to make CSS compatible with British English and American English, both `grey` and `gray` have the same output.",
+      "tags": ["color", "css"],
+      "example":
+        "<div class='color-dot' style='background-color: grey'>Grey</div><div class='color-dot' style='background-color: gray'>Gray</div>",
+      "code":
+        "```<div class='color-dot' style='background-color: grey'>Grey</div><div class='color-dot' style='background-color: gray'>Gray</div>```"
+    },
+    {
+      "id": 1,
+      "title": "Dark, darker, darkest",
+      "description": "..`Grey` is darker then `Darkgrey` ",
+      "example":
+        "<div class='color-dot' style='background-color: darkgrey'>Darkgrey</div><div class='color-dot' style='background-color: grey'>Grey</div>",
+      "tags": ["color", "css"]
+    },
+    {
+      "id": 2,
+      "title": "The flex middle",
+      "description":
+        "`place-content: center center;` does exactly the same as `justify-content: center; align-items: center;`",
+      "example":
+        "<div class='block' style='display: flex; align-items: center; justify-content: center;'><div class='box'>Hi</div></div><div class='block' style='display: flex; place-content: center center;'><div class='box'>Hi</div></div>",
+      "tags": ["flexbox", "css"]
+    },
+    {
+      "id": 3,
+      "title": "Autoprefix using Custom properties",
+      "description":
+        "You can create a \"mixin\" prefixed properties using custom properties. \n Be aware, this creates clip-paths on all elements, so it could show your rendering.",
+      "code":
+        "```\n* { \n\t--clip-path: initial;\n\t--webkit-clip-path: var(--clip-path);\n\tclip-path: var(--clip-path);\n}\n\ndiv {\n\t--clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);\n}",
+      "tags": ["prefix", "custom-properties", "css"]
+    },
+    {
+      "id": 4,
+      "title": "Autoprefix using Custom properties",
+      "description": "..you can create a animation with only one `keyframe`.",
+      "example":
+        "<div class='block' style='display: flex; align-items: center; justify-content: center;'><div id='boxUpp' class='box'>Hi</div></div><style>@keyframes upp{ to{ transform: rotate(360deg); } } #boxUpp{ animation: upp 2s infinite; }</style>",
+
+      "code":
+        "``` \n@keyframes upp{ \n\tto { transform: translateY(-50%); } \n}\n\ndiv{ \n\tanimation: upp .5s infinite; \n}\n\t",
+      "tags": ["animation", "css", "keyframe"]
+    },
+    {
+      "id": 5,
+      "title": "Absolute Clipping",
+      "description":
+        "..`clip: rect(20px, 20px, 20px, 20px);` only works on absolute elements.",
+      "tags": ["clip", "css", "absolute"]
+    },
+    {
+      "id": 6,
+      "title": "Wavy",
+      "example":
+        "<div class='block' style='display: flex; align-items: center; justify-content: center;'><a id='wavelink' href='#'>Hi You!</a></div><style>#wavelink{ text-decoration: blue underline wavy; }</style>",
+
+      "description": "..there is a `wave` text-decoration",
+      "code": "``` \n.div{ \n\ttext-decoration: wavy; \n}",
+
+      "tags": ["text-decoration", "wavy", "css", "link"]
+    }
+  ]
+}

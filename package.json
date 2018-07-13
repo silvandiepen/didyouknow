@@ -1,0 +1,35 @@
+{
+  "name": "didyouknow",
+  "version": "1.0.0",
+  "description": "CSS Did you know",
+  "author": "me@silvandiepen.com",
+  "private": true,
+  "scripts": {
+    "dev": "HOST=0.0.0.0 PORT=2525 nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate",
+    "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
+    "precommit": "npm run lint"
+  },
+  "dependencies": {
+    "nuxt": "^1.0.0",
+    "vue-markdown": "^2.2.4"
+  },
+  "devDependencies": {
+    "@nuxtjs/manifest": "^2.1.0",
+    "@nuxtjs/pwa": "^2.0.8",
+    "autoprefixer": "^8.6.5",
+    "babel-eslint": "^8.2.1",
+    "eslint": "^4.15.0",
+    "eslint-friendly-formatter": "^3.0.0",
+    "eslint-loader": "^1.7.1",
+    "eslint-plugin-vue": "^4.0.0",
+    "henris": "^0.2.7",
+    "node-sass": "^4.9.2",
+    "nuxt-rfg-icon": "^0.4.3",
+    "postcss": "^6.0.23",
+    "pug": "^2.0.3",
+    "sass-loader": "^7.0.3"
+  }
+}
